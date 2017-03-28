@@ -1,0 +1,876 @@
+<!DOCTYPE html>
+<!--
+    Licensed to the Apache Software Foundation (ASF) under one
+    or more contributor license agreements.  See the NOTICE file
+    distributed with this work for additional information
+    regarding copyright ownership.  The ASF licenses this file
+    to you under the Apache License, Version 2.0 (the
+    "License"); you may not use this file except in compliance
+    with the License.  You may obtain a copy of the License at
+
+    http://www.apache.org/licenses/LICENSE-2.0
+
+    Unless required by applicable law or agreed to in writing,
+    software distributed under the License is distributed on an
+    "AS IS" BASIS, WITHOUT WARRANTIES OR CONDITIONS OF ANY
+     KIND, either express or implied.  See the License for the
+    specific language governing permissions and limitations
+    under the License.
+-->
+<html>
+    <head>
+        <!--
+        Customize this policy to fit your own app's needs. For more guidance, see:
+            https://github.com/apache/cordova-plugin-whitelist/blob/master/README.md#content-security-policy
+        Some notes:
+            * gap: is required only on iOS (when using UIWebView) and is needed for JS->native communication
+            * https://ssl.gstatic.com is required only on Android and is needed for TalkBack to function properly
+            * Disables use of inline scripts in order to mitigate risk of XSS vulnerabilities. To change this:
+                * Enable inline JS: add 'unsafe-inline' to default-src
+        -->
+        <!--<meta http-equiv="Content-Security-Policy" content="default-src 'self' data: gap: https://ssl.gstatic.com 'unsafe-eval' 'unsafe-inline'; style-src 'self' 'unsafe-inline'; media-src *; img-src 'self' data: content:;">-->
+        <meta name="format-detection" content="telephone=no">
+        <meta name="msapplication-tap-highlight" content="no">
+        <meta name="viewport" content="user-scalable=no, initial-scale=1, maximum-scale=1, minimum-scale=1, width=device-width">
+        <link href="js/libs/jquery-mobile/jquery.mobile.structure.min.css" rel="stylesheet" type="text/css"/>
+        <link href="js/libs/jquery-mobile/jquery.mobile.icons.min.css" rel="stylesheet" type="text/css"/>
+        <link href="js/libs/jquery-mobile/jquery.mobile.theme.min.css" rel="stylesheet" type="text/css"/>
+        <script src="js/libs/jquery/jquery.min.js" type="text/javascript"></script>
+        <script src="js/libs/jquery-mobile/jquery.mobile.min.js" type="text/javascript"></script>
+        <script src="cordova.js"></script>
+        <script src="js/index.js"></script>
+        <script src="js/InserisciUtente.js" type="text/javascript"></script>
+        <link href="css/index.css" rel="stylesheet" type="text/css"/>
+      <link href="font-awesome/css/font-awesome.min.css" rel="stylesheet" type="text/css"/>
+
+
+
+        <title>Comune Pescara</title>
+    </head>
+    <body style="font-family: Palatino Linotype;">
+
+
+        <div data-role="page"  id="home" style="background-color: #005599;">
+
+
+
+            <div data-role="panel" style="text-align: center;" id="pannello">
+                <img src="img/Ponte_delmare.png" alt=""/>
+               
+                <h3>Menu</h3>
+                <ul data-role="listview">
+                    <li><a href="#home">Home</a></li>
+                    <li><a href="#visitare">Visitare</a></li>
+                    <li><a href="#percorsi">Itinerari</a></li>
+                    <li><a href="#galleria">Galleria</a></li>
+                    <li><a href="#preferiti">Preferiti</a></li>
+                    <li><a href="#contatti">Contatti</a></li>
+                    <li><a href="#trasporti">Trasporti</a></li>
+                    <li><a href="#mappa">Mappa</a></li>
+                    <h1></h1>
+                   
+                    
+                </ul>
+                
+            </div>
+           
+
+
+
+             <div data-role="header" id="head" data-theme="b" data-position="fixed">
+                <a href="#pannello" id="head" class="ui-btn ui-btn-left ui-icon-bars ui-btn-icon-left ui-btn-icon-notext">Menù</a>
+                
+               
+                <h1 >Home</h1> 
+                
+                
+
+
+
+            </div>
+            <div  style="text-align: center;" data-role="main" class="ui-content ">
+
+                <!-- Corpo della pagina -->
+                
+                <div data-role="contain" id="sfondoHome">
+                <h1 style="text-align: center; "> Comune Di Pescara</h1>
+                
+                <img src="img/logo-comune.png"  style=width:70px alt=""/>
+                </div>
+                <img src="img/sfondo.png" alt="" id="sfondoHome"/>
+
+                <div>
+                    
+                    <h3>Descrizione</h3>
+                    
+                  
+
+
+
+
+                    <h4>
+
+                        La citta' piu' popolosa dell'Abruzzo ed e' insieme con L'Aquila sede degli uffici del 
+                        Consiglio, della Giunta e degli Assessorati regionali. Pur avendo un aspetto 
+                        prevalentemente moderno è una città con antiche origini. 
+                        L'attuale divisione amministrativa è nata dalla fusione di 
+                        Pescara con il comune limitrofo di Castellammare Adriatico nel 1927, con 
+                        la costituzione della provincia. Pescara è vivace punto di vista culturale, 
+                        avendo dato i natali a personalità come Gabriele D'Annunzio ed Ennio Flaiano, 
+                        ed essendo sede di importanti manifestazioni quali, ad esempio, il Pescara Jazz 
+                        (primo festival estivo italiano dedicato a questo genere musicale), 
+                        il Premio Ennio Flaiano e la rassegna d'arte contemporanea Fuori Uso. La città ha 
+                        anche una notevole tradizione sportiva, avendo ospitato la XVI 
+                        edizione dei Giochi del Mediterraneo nel 2009 e la Coppa Acerbo dal 1929 al 1961. 
+                        Inoltre, dal 1945 vi si svolge ogni anno il Trofeo ciclistico Matteotti.
+
+                    </h4>
+
+
+                </div>
+
+
+            </div>
+            <div data-role="footer" data-theme="b" data-position="fixed" style="text-align: center;">
+              
+                <a href="https://www.facebook.com/Comune-di-Pescara-803719146335447/" class="fa fa-facebook fa-2x ui-link ui-btn ui-corner-all" data-role="button" role="button"></a>
+                <a href="https://www.instagram.com/explore/locations/237210044/comune-di-pescara/"  class="fa fa-instagram fa-2x ui-link ui-btn ui-corner-all" data-role="button" role="button"></a>
+                <a href="https://twitter.com/pescaranews?lang=it" class="fa fa-twitter fa-2x ui-link ui-btn ui-corner-all" data-role="button" role="button"></a>
+            
+            </div>
+        </div>
+
+        <!-- Pagina Luoghi da Visitare -->
+        <div data-role="page"  style="text-align: center;" id="visitare">
+             
+            <div data-role="panel" id="pannelloVisitare">
+           
+                <img src="img/Ponte_delmare.png" alt=""/>
+            <h3>Visitare</h3>
+                <ul  data-role="listview">
+                    
+
+                    <li><a href="#home">Home</a></li>
+                    <li><a href="#visitare">Visitare</a></li>
+                    <li><a href="#percorsi">Itinerari</a></li>
+                    <li><a href="#galleria">Galleria</a></li>
+                    <li><a href="#preferiti">Preferiti</a></li>
+                    <li><a href="#contatti">Contatti</a></li>
+                    <li><a href="#trasporti">Trasporti</a></li>
+                    <li><a href="#mappa">Mappa</a></li>
+
+                </ul>
+            </div>
+            <div  data-role="header" id="head" data-position="fixed">
+                <a href="#pannelloVisitare" id="head" class="ui-btn ui-btn-left ui-icon-bars ui-btn-icon-left ui-btn-icon-notext">Menù</a>
+                 <h1>Visitare</h1>
+                    
+              
+                
+
+
+
+
+            </div>
+            <div data-role="main" class="ui-content">
+
+                <h2 style="text-align: center">Luoghi da Visitare</h2>
+
+                <ul data-role="listview" >
+                    <li><a href="#museo"><img src="luoghi da visitare/musei/logo-museo.png">Musei</a></li>
+                    <li><a href="#chiesa"><img src="luoghi da visitare/chiese/logo-chiese.png">chiese</a></li>
+                    <li><a href="#cinema"><img src="luoghi da visitare/cinema/logo-cinema.png">cinema</a></li>
+                    <li><a href="#interesse"> <img src="luoghi da visitare/punti di interesse/logo-interesse.png"/>Punti di Interesse</a></li>
+                    <li><a href="#farmacie"> <img src="luoghi da visitare/farmacie/logo-farmacie.png"/>Farmacie</a></li>
+                    <li><a href="#ristoranti"><img src="luoghi da visitare/risto/risto.png"/>Enogastronomia</a></li>
+                </ul> 
+
+
+
+
+
+            </div>
+           <div data-role="footer" data-theme="b" data-position="fixed" style="text-align: center;">
+               
+                  <a href="https://www.facebook.com/Comune-di-Pescara-803719146335447/" class="fa fa-facebook fa-2x ui-link ui-btn ui-corner-all" data-role="button" role="button"></a>
+                <a href="https://www.instagram.com/explore/locations/237210044/comune-di-pescara/"  class="fa fa-instagram fa-2x ui-link ui-btn ui-corner-all" data-role="button" role="button"></a>
+                <a href="https://twitter.com/pescaranews?lang=it" class="fa fa-twitter fa-2x ui-link ui-btn ui-corner-all" data-role="button" role="button"></a>
+            
+               
+            </div>
+        </div>
+        <!--  End Pagina Luoghi da Visitare -->
+
+
+
+
+        <!-- Pagina Percorsi Imporatanti -->
+
+
+        <div data-role="page"  id="percorsi">
+            <div data-role="panel"  style="text-align: center;" id="pannelloPercorsi">
+                
+                <img src="img/Ponte_delmare.png" alt=""/>
+                <h3>Percorsi</h3>
+               
+                <ul data-role="listview">
+                    
+                    <li><a href="#home">Home</a></li>
+                    <li><a href="#visitare">Visitare</a></li>
+                    <li><a href="#percorsi">Itinerari</a></li>
+                    <li><a href="#galleria">Galleria</a></li>
+                    <li><a href="#preferiti">Preferiti</a></li>
+                    <li><a href="#contatti">Contatti</a></li>
+                    <li><a href="#trasporti">Trasporti</a></li>
+                    <li><a href="#mappa">Mappa</a></li>
+
+                </ul>
+            </div>
+            <div data-role="header" id="head" data-position="fixed">
+                <a href="#pannelloPercorsi" id="head" class="ui-btn ui-btn-left ui-icon-bars ui-btn-icon-left ui-btn-icon-notext">Menù</a>
+                <h1>Percorsi</h1>
+
+            </div>
+            <div data-role="main" class="ui-content"  style="padding: 0; margin:0;">
+
+                <iframe src="https://www.google.com/maps/d/embed?mid=1uLgtcpCg14-rSfVTqdkTb7iDfCU" width="100%" height="480" margin="0" padding="0"></iframe>
+
+
+
+
+            </div>
+            <div data-role="footer"  data-theme="b" data-position="fixed" style="text-align: center;">
+               
+                    <a href="https://www.facebook.com/Comune-di-Pescara-803719146335447/" class="fa fa-facebook fa-2x ui-link ui-btn ui-corner-all" data-role="button" role="button"></a>
+                <a href="https://www.instagram.com/explore/locations/237210044/comune-di-pescara/"  class="fa fa-instagram fa-2x ui-link ui-btn ui-corner-all" data-role="button" role="button"></a>
+                <a href="https://twitter.com/pescaranews?lang=it" class="fa fa-twitter fa-2x ui-link ui-btn ui-corner-all" data-role="button" role="button"></a>
+            
+                
+            </div>
+        </div>
+        <!-- End Pagina Percorsi Imporatanti -->
+
+        <!--  Pagina Luoghi da Galleria -->
+
+
+        <div data-role="page"  id="galleria">
+            <div data-role="panel"  style="text-align: center;" id="pannelloGalleria">
+                <img src="img/Ponte_delmare.png" alt=""/>
+               
+                <h3>Galleria</h3>
+                <ul data-role="listview">
+
+                    <li><a href="#home">Home</a></li>
+                    <li><a href="#visitare">Visitare</a></li>
+                    <li><a href="#percorsi">Itinerari</a></li>
+                    <li><a href="#galleria">Galleria</a></li>
+                    <li><a href="#preferiti">Preferiti</a></li>
+                    <li><a href="#contatti">Contatti</a></li>
+                    <li><a href="#trasporti">Trasporti</a></li>
+                    <li><a href="#mappa">Mappa</a></li>
+
+                </ul>
+            </div>
+            <div data-role="header" id="head"data-position="fixed">
+                <a href="#pannelloGalleria"  id="head" class="ui-btn ui-btn-left ui-icon-bars ui-btn-icon-left ui-btn-icon-notext">Menù</a>
+                <h1>Galleria</h1>
+
+
+
+            </div>
+
+            <div style="text-align: center">
+                <img id="mainImage" style="border:3px solid grey "
+                     src="/img/logo-comune.png" height="200px" width="300px" />
+
+
+            </div>
+            <div  id="slider" data-role="main" class="ui-content" style="text-align:center">
+                <img src="img/aurum.jpg " alt="" height="100" width="100"/>
+                <img src="img/logo-comune.png" alt="" height="100" width="100"/>
+                <img src="img/logo-farmacie.png" alt="" height="100" width="100"/>
+                <img src="img/aurum.jpg " alt="" height="100" width="100"/>
+                <img src="img/logo-comune.png" alt="" height="100" width="100"/>
+                <img src="img/logo-farmacie.png" alt="" height="100" width="100"/>
+                <img src="img/logo-farmacie.png" alt="" height="100" width="100"/>
+
+            </div>
+
+
+
+
+
+            <div data-role="footer"  data-theme="b" id="head" data-position="fixed" style="text-align: center;">
+               <a href="https://www.facebook.com/Comune-di-Pescara-803719146335447/" class="fa fa-facebook fa-2x ui-link ui-btn ui-corner-all" data-role="button" role="button"></a>
+                <a href="https://www.instagram.com/explore/locations/237210044/comune-di-pescara/"  class="fa fa-instagram fa-2x ui-link ui-btn ui-corner-all" data-role="button" role="button"></a>
+                <a href="https://twitter.com/pescaranews?lang=it" class="fa fa-twitter fa-2x ui-link ui-btn ui-corner-all" data-role="button" role="button"></a>
+            
+            </div>
+        </div>
+        <!-- End Pagina Luoghi Galleria -->
+
+
+        <!--  Pagina Luoghi da Preferiti -->
+
+
+        <div data-role="page"  id="preferiti">
+            <div data-role="panel"   style="text-align: center;"id="pannelloPreferiti">
+                <img src="img/Ponte_delmare.png" alt=""/>
+                <h3>Preferiti</h3>
+                <ul data-role="listview">
+
+                    <li><a href="#home">Home</a></li>
+                    <li><a href="#visitare">Visitare</a></li>
+                    <li><a href="#percorsi">Itinerari</a></li>
+                    <li><a href="#galleria">Galleria</a></li>
+                    <li><a href="#preferiti">Preferiti</a></li>
+                    <li><a href="#contatti">Contatti</a></li>
+                    <li><a href="#trasporti">Trasporti</a></li>
+                    <li><a href="#mappa">Mappa</a></li>
+
+                </ul>
+            </div>
+            <div data-role="header"  id="head" data-position="fixed">
+                <a href="#pannelloPreferiti" id="head" class="ui-btn ui-btn-left ui-icon-bars ui-btn-icon-left ui-btn-icon-notext">Menù</a>
+                <h1>Preferiti</h1>
+                
+
+            </div>
+            <div data-role="main" class="ui-content">
+                
+                <div>
+                        <div id="listaPreferiti" data-role='listview'></div>
+
+                    </div>
+                
+
+
+            </div>
+            <div data-role="footer" data-theme="b" data-position="fixed" style="text-align: center;">
+               <a href="https://www.facebook.com/Comune-di-Pescara-803719146335447/" class="fa fa-facebook fa-2x ui-link ui-btn ui-corner-all" data-role="button" role="button"></a>
+                <a href="https://www.instagram.com/explore/locations/237210044/comune-di-pescara/"  class="fa fa-instagram fa-2x ui-link ui-btn ui-corner-all" data-role="button" role="button"></a>
+                <a href="https://twitter.com/pescaranews?lang=it" class="fa fa-twitter fa-2x ui-link ui-btn ui-corner-all" data-role="button" role="button"></a>
+            
+            </div>
+        </div>
+        <!-- End Pagina Luoghi Preferiti -->
+
+
+        <!--  Pagina Contatti -->
+
+
+        <div data-role="page"  id="contatti">
+            <div data-role="panel"  style="text-align: center;" id="pannelloContatti">
+                <h3>Contatti</h3>
+                <ul data-role="listview">
+
+                    <li><a href="#home">Home</a></li>
+                    <li><a href="#visitare">Visitare</a></li>
+                    <li><a href="#percorsi">Itinerari</a></li>
+                    <li><a href="#galleria">Galleria</a></li>
+                    <li><a href="#preferiti">Preferiti</a></li>
+                    <li><a href="#contatti">Contatti</a></li>
+                    <li><a href="#trasporti">Trasporti</a></li>
+                    <li><a href="#mappa">Mappa</a></li>
+
+                </ul>
+            </div>
+            <div data-role="header" id="head" data-position="fixed">
+                <a href="#pannelloContatti"  id="head" class="ui-btn ui-btn-left ui-icon-bars ui-btn-icon-left ui-btn-icon-notext">Menù</a>
+                <h1>Contatti</h1>
+
+            </div>
+            <div data-role="main" class="ui-content">
+                <h3 style="text-align: center">CONTATTI EMAIL</h3>
+
+                <h4>indirizzo emailinfo@comune.pescara.it</h4>
+                <h4>Posta Elettronica Certificataprotocollo@pec.comune.pescara.it</h4>
+
+                <!-- Form per contatti --> 
+
+                <div class="ui-field-contain">
+                    <form id="inserisciUtente">
+                        <input type="text" name="nome" id="nome" placeholder="nome">
+                        <input type="text" name="cognome" id="cognome" placeholder="cognome">
+                        <input type="email" name="email" id="email" placeholder="email">
+                        <input type="text" name="commento" id="commento" placeholder="commento">
+                        <input type="submit" value="Invia" class="ui-btn">
+
+                        <div id="elenco" data-theme="b">
+                            <ul id="listaUtenti" data-role='listview'></ul>
+
+                        </div>
+
+
+                    </form>
+                </div>
+            </div>
+
+            <!-- Form per contatti --> 
+
+
+
+            <div data-role="footer" data-theme="b" data-position="fixed" style="text-align: center;">
+               <a href="https://www.facebook.com/Comune-di-Pescara-803719146335447/" class="fa fa-facebook fa-2x ui-link ui-btn ui-corner-all" data-role="button" role="button"></a>
+                <a href="https://www.instagram.com/explore/locations/237210044/comune-di-pescara/"  class="fa fa-instagram fa-2x ui-link ui-btn ui-corner-all" data-role="button" role="button"></a>
+                <a href="https://twitter.com/pescaranews?lang=it" class="fa fa-twitter fa-2x ui-link ui-btn ui-corner-all" data-role="button" role="button"></a>
+            
+            </div>
+        </div>
+        <!-- Pagina Contatti ENd -->
+
+
+        <!--  Pagina Trasporti -->
+
+
+        <div data-role="page"   id="trasporti">
+            <div data-role="panel"  style="text-align: center;" id="pannelloTrasporti">
+                <img src="img/Ponte_delmare.png" alt=""/>
+                <h3>Trasporti</h3>
+                <ul data-role="listview">
+
+                    <li><a href="#home">Home</a></li>
+                    <li><a href="#visitare">Visitare</a></li>
+                    <li><a href="#percorsi">Itinerari</a></li>
+                    <li><a href="#galleria">Galleria</a></li>
+                    <li><a href="#preferiti">Preferiti</a></li>
+                    <li><a href="#contatti">Contatti</a></li>
+                    <li><a href="#trasporti">Trasporti</a></li>
+                    <li><a href="#mappa">Mappa</a></li>
+
+                </ul>
+            </div>
+            <div data-role="header" id="head" data-position="fixed">
+                <a href="#pannelloTrasporti" id="head" class="ui-btn ui-btn-left ui-icon-bars ui-btn-icon-left ui-btn-icon-notext">Menù</a>
+                <h1>Trasporti</h1>
+
+            </div>
+            <div data-role="main" class="ui-content">
+                
+                
+                
+
+                <h3 style="text-align: center">SOCIETA' ABRUZZESE GESTIONE AEROPORTI S.P.A</h3>
+                Via Tiburtina Valeria, 100 - 085 53732 - 085 432421
+
+                <h3 style="text-align: center">TRENITALIA</h3>
+                Via E. Ferrari, 1 -  085 4221134
+                Sito Internet
+
+                <h3 style="text-align: center">GESTIONE TRASPORTI METROPOLITANI</h3>
+                Via Aterno, 255 - 085 43212
+
+                <h3 style="text-align: center">AUTOSTRADE S.P.A.</h3>
+                Citta' Sant'Angelo (PE) - Via Saline, 29 - 085 95991	
+
+                <h3 style="text-align: center">ARPA - AUTOLINEE REGIONALI PUBBLICHE ABRUZZESI</h3>
+                Piazza della Repubblica, 1 - 085 4215099	
+
+                <h3 style="text-align: center">TRASPOSTI   MARITTIMI</3>
+                    Stazione Marittima - banchina Sud   - 085 65247 085 4510873	Sito Internet
+                    <h3 style="text-align: center">LINEE EXTRAURBANE</h3>
+                    Di Fonzo Capuani - 085 4211891
+                    Di Fonzo - 0873 367146
+                    Di Febo Capuani - 085 9462119
+                    Panoramica Satam - 085 4210733
+
+                    <h3 style="text-align: center">TAXI</h3>
+                    Stazione Ferroviaria - Via E. Ferrari - 085 4211870
+                    Aeroporto - Via Tiburtina Valeria, 100 - 085 53748
+
+                    <h3 style="text-align: center">TAXIAUTONOLEGGIO</h3>
+                    Europcar - Viale G. Bovio, 45 - 085 4211022
+                    Hertz - Via Tiburtina, 250 - 085 53900
+                    Avis - Via Pisa, 23 - 085 4212442
+
+
+
+
+            </div>
+            <div data-role="footer" data-theme="b" data-position="fixed" style="text-align: center;">
+               <a href="https://www.facebook.com/Comune-di-Pescara-803719146335447/" class="fa fa-facebook fa-2x ui-link ui-btn ui-corner-all" data-role="button" role="button"></a>
+                <a href="https://www.instagram.com/explore/locations/237210044/comune-di-pescara/"  class="fa fa-instagram fa-2x ui-link ui-btn ui-corner-all" data-role="button" role="button"></a>
+                <a href="https://twitter.com/pescaranews?lang=it" class="fa fa-twitter fa-2x ui-link ui-btn ui-corner-all" data-role="button" role="button"></a>
+            
+            </div>
+        </div>
+        <!-- Pagina Trasporti ENd -->
+
+
+        <!--  Pagina Mappa -->
+
+
+        <div data-role="page"  id="mappa">
+            <div data-role="panel"  style="text-align: center;" id="pannelloMappa">
+                <img src="img/Ponte_delmare.png" alt=""/>
+                <h3>Mappa</h3>
+                <ul data-role="listview">
+
+                    <li><a href="#home">Home</a></li>
+                    <li><a href="#visitare">Visitare</a></li>
+                    <li><a href="#percorsi">Itinerari</a></li>
+                    <li><a href="#galleria">Galleria</a></li>
+                    <li><a href="#preferiti">Preferiti</a></li>
+                    <li><a href="#contatti">Contatti</a></li>
+                    <li><a href="#trasporti">Trasporti</a></li>
+                    <li><a href="#mappa">Mappa</a></li>
+                    
+                </ul>
+            </div>
+            <div data-role="header" id="head" data-position="fixed">
+                <a href="#pannelloMappa" id="head" class="ui-btn ui-btn-left ui-icon-bars ui-btn-icon-left ui-btn-icon-notext">Menù</a>
+                <h1>Mappa</h1>
+
+            </div>
+            <div data-role="main" class="ui-content" style="padding: 0; margin:0;">
+
+                <iframe src="https://www.google.com/maps/d/embed?mid=1oTb9KFwr0H5es7NGpy8u8rhW6KQ" width="100%" height="480" margin="0" padding="0"></iframe>
+
+            </div>
+            <div data-role="footer"  data-theme="b" data-position="fixed" style="text-align: center;">
+               <a href="https://www.facebook.com/Comune-di-Pescara-803719146335447/" class="fa fa-facebook fa-2x ui-link ui-btn ui-corner-all" data-role="button" role="button"></a>
+                <a href="https://www.instagram.com/explore/locations/237210044/comune-di-pescara/"  class="fa fa-instagram fa-2x ui-link ui-btn ui-corner-all" data-role="button" role="button"></a>
+                <a href="https://twitter.com/pescaranews?lang=it" class="fa fa-twitter fa-2x ui-link ui-btn ui-corner-all" data-role="button" role="button"></a>
+            
+            </div>
+        </div>
+        <!-- Pagina Mappa ENd -->
+
+        <!---------------------------------------------->
+
+        <!--  Pagina Musei da visitare -->
+
+
+
+        <div data-role="page"    id="museo">
+            <div data-role="panel"  style="text-align: center;" id="pannellomuseo">
+                <img src="img/Ponte_delmare.png" alt=""/>
+                <h3>Musei</h3>
+                <ul data-role="listview">
+
+                    <li><a href="#home">Home</a></li>
+                    <li><a href="#visitare">Visitare</a></li>
+                    <li><a href="#percorsi">Itinerari</a></li>
+                    <li><a href="#galleria">Galleria</a></li>
+                    <li><a href="#preferiti">Preferiti</a></li>
+                    <li><a href="#contatti">Contatti</a></li>
+                    <li><a href="#trasporti">Trasporti</a></li>
+                    <li><a href="#mappa">Mappa</a></li>
+
+                </ul>
+            </div>
+            <div data-role="header"  id="head" data-position="fixed">
+                <a href="#pannellomuseo"  id="head" class="ui-btn ui-btn-left ui-icon-bars ui-btn-icon-left ui-btn-icon-notext">Menù</a>
+                <h1>Musei</h1>
+
+
+                <div>
+                   
+
+                </div>
+                <div  data-role="main" data-theme="b" class="ui-content">                
+                    <ul  id="listaMusei" class="ui-listview" data-role='listview'></ul>
+                </div>
+                <div data-role="footer" data-theme="b" data-position="fixed" style="text-align: center;">
+                   <a href="https://www.facebook.com/Comune-di-Pescara-803719146335447/" class="fa fa-facebook fa-2x ui-link ui-btn ui-corner-all" data-role="button" role="button"></a>
+                <a href="https://www.instagram.com/explore/locations/237210044/comune-di-pescara/"  class="fa fa-instagram fa-2x ui-link ui-btn ui-corner-all" data-role="button" role="button"></a>
+                <a href="https://twitter.com/pescaranews?lang=it" class="fa fa-twitter fa-2x ui-link ui-btn ui-corner-all" data-role="button" role="button"></a>
+            
+                </div>
+            </div>
+        </div>
+        <!-- Fine Pagina Musei da visitare -->
+
+
+
+
+        <!--  Pagina Chiese da visitare -->
+
+        <div data-role="page"  id="chiesa">
+            <div data-role="panel"  style="text-align: center;" id="pannellochiesa">
+                <img src="img/Ponte_delmare.png" alt=""/>
+                <h3>Chiese</h3>
+                <ul data-role="listview">
+
+                    <li><a href="#home">Home</a></li>
+                    <li><a href="#visitare">Visitare</a></li>
+                    <li><a href="#percorsi">Itinerari</a></li>
+                    <li><a href="#galleria">Galleria</a></li>
+                    <li><a href="#preferiti">Preferiti</a></li>
+                    <li><a href="#contatti">Contatti</a></li>
+                    <li><a href="#trasporti">Trasporti</a></li>
+                    <li><a href="#mappa">Mappa</a></li>
+
+                </ul>
+            </div>
+            <div data-role="header" id="head"  data-position="fixed">
+                <a href="#pannellochiesa" id="head" class="ui-btn ui-btn-left ui-icon-bars ui-btn-icon-left ui-btn-icon-notext">Menù</a>
+                <h1>Chiese</h1>
+
+
+                <div>
+                   
+
+                </div>
+                <div data-role="main" class="ui-content">
+
+
+
+
+                    <div>
+                        <ul id="listaChiese" data-role='listview'></ul>
+
+                    </div>
+
+                    <ol data-role="listview">
+
+                    </ol>
+
+
+                </div>
+                <div data-role="footer" data-theme="b" data-position="fixed" style="text-align: center;">
+                  <a href="https://www.facebook.com/Comune-di-Pescara-803719146335447/" class="fa fa-facebook fa-2x ui-link ui-btn ui-corner-all" data-role="button" role="button"></a>
+                <a href="https://www.instagram.com/explore/locations/237210044/comune-di-pescara/"  class="fa fa-instagram fa-2x ui-link ui-btn ui-corner-all" data-role="button" role="button"></a>
+                <a href="https://twitter.com/pescaranews?lang=it" class="fa fa-twitter fa-2x ui-link ui-btn ui-corner-all" data-role="button" role="button"></a>
+            
+                </div>
+            </div>
+        </div>
+        <!-- Fine Pagina Chiese da visitare -->
+
+
+
+        <!--  Pagina cinema da visitare -->
+
+
+
+        <div data-role="page"  id="cinema">
+            <div data-role="panel"   style="text-align: center;" id="pannelloCinema">
+                <img src="img/Ponte_delmare.png" alt=""/>
+                <h3>Cinema</h3>
+                <ul data-role="listview">
+
+                    <li><a href="#home">Home</a></li>
+                    <li><a href="#visitare">Visitare</a></li>
+                    <li><a href="#percorsi">Itinerari</a></li>
+                    <li><a href="#galleria">Galleria</a></li>
+                    <li><a href="#preferiti">Preferiti</a></li>
+                    <li><a href="#contatti">Contatti</a></li>
+                    <li><a href="#trasporti">Trasporti</a></li>
+                    <li><a href="#mappa">Mappa</a></li>
+
+                </ul>
+            </div>
+            <div data-role="header" id="head" data-position="fixed">
+                <a href="#pannelloCinema" id="head" class="ui-btn ui-btn-left ui-icon-bars ui-btn-icon-left ui-btn-icon-notext">Menù</a>
+                <h1>Cinema</h1>
+
+
+
+                <div data-role="main" class="ui-content">
+
+
+
+
+                    <div>
+                        <ul id="listaCinema" data-role='listview'></ul>
+
+                    </div>
+
+                    <ol data-role="listview">
+
+
+                    </ol>
+
+
+                </div>
+                <div data-role="footer" data-theme="b" data-position="fixed" style="text-align: center;">
+                   <a href="https://www.facebook.com/Comune-di-Pescara-803719146335447/" class="fa fa-facebook fa-2x ui-link ui-btn ui-corner-all" data-role="button" role="button"></a>
+                <a href="https://www.instagram.com/explore/locations/237210044/comune-di-pescara/"  class="fa fa-instagram fa-2x ui-link ui-btn ui-corner-all" data-role="button" role="button"></a>
+                <a href="https://twitter.com/pescaranews?lang=it" class="fa fa-twitter fa-2x ui-link ui-btn ui-corner-all" data-role="button" role="button"></a>
+            
+                </div>
+            </div>
+        </div>
+        <!-- Pagina cinema da visitare -->
+
+
+
+        <!--  Pagina Punti di Interesse da visitare -->
+
+
+
+        <div data-role="page"   id="interesse">
+            <div data-role="panel"  style="text-align: center;" id="pannelloInteresse">
+                <img src="img/Ponte_delmare.png" alt=""/>
+                <h3>Interesse</h3>
+                <ul data-role="listview">
+
+                    <li><a href="#home">Home</a></li>
+                    <li><a href="#visitare">Visitare</a></li>
+                    <li><a href="#percorsi">Itinerari</a></li>
+                    <li><a href="#galleria">Galleria</a></li>
+                    <li><a href="#preferiti">Preferiti</a></li>
+                    <li><a href="#contatti">Contatti</a></li>
+                    <li><a href="#trasporti">Trasporti</a></li>
+                    <li><a href="#mappa">Mappa</a></li>
+
+                </ul>
+            </div>
+            <div data-role="header" id="head" data-position="fixed">
+                <a href="#pannelloInteresse"  id="head" class="ui-btn ui-btn-left ui-icon-bars ui-btn-icon-left ui-btn-icon-notext">Menù</a>
+                <h1>Punto di Interesse</h1>
+
+
+
+                <div data-role="main" class="ui-content">
+
+
+
+
+                    <div>
+                        <ul id="listaInteresse" data-role='listview'></ul>
+
+                    </div>
+
+                    <ol data-role="listview">
+
+
+                    </ol>
+
+
+                </div>
+                <div  data-theme="b" data-role="footer"  data-position="fixed" style="text-align: center;">
+                   <a href="https://www.facebook.com/Comune-di-Pescara-803719146335447/" class="fa fa-facebook fa-2x ui-link ui-btn ui-corner-all" data-role="button" role="button"></a>
+                <a href="https://www.instagram.com/explore/locations/237210044/comune-di-pescara/"  class="fa fa-instagram fa-2x ui-link ui-btn ui-corner-all" data-role="button" role="button"></a>
+                <a href="https://twitter.com/pescaranews?lang=it" class="fa fa-twitter fa-2x ui-link ui-btn ui-corner-all" data-role="button" role="button"></a>
+            
+                </div>
+            </div>
+        </div>
+        <!-- Pagina punto di Interesse da visitare -->
+
+        <!--  Pagina Punti di Farmacie da visitare -->
+
+
+
+        <div data-role="page"  id="farmacie">
+            <div data-role="panel"  style="text-align: center;" id="pannelloFarmacie">
+                <img src="img/Ponte_delmare.png" alt=""/>
+                <h3>Farmacie</h3>
+                <ul data-role="listview">
+
+                    <li><a href="#home">Home</a></li>
+                    <li><a href="#visitare">Visitare</a></li>
+                    <li><a href="#percorsi">Itinerari</a></li>
+                    <li><a href="#galleria">Galleria</a></li>
+                    <li><a href="#preferiti">Preferiti</a></li>
+                    <li><a href="#contatti">Contatti</a></li>
+                    <li><a href="#trasporti">Trasporti</a></li>
+                    <li><a href="#mappa">Mappa</a></li>
+
+                </ul>
+            </div>
+            <div data-role="header" id=head data-position="fixed">
+                <a href="#pannelloFarmacie" id=head class="ui-btn ui-btn-left ui-icon-bars ui-btn-icon-left ui-btn-icon-notext">Menù</a>
+                <h1>Farmacie</h1>
+
+
+
+                <div data-role="main" class="ui-content">
+
+
+
+
+                    <div>
+                        <ul id="listaFarmacie" data-role='listview'></ul>
+
+                    </div>
+
+                    <ol data-role="listview">
+
+
+                    </ol>
+
+
+                </div>
+                <div data-role="footer"  data-theme="b" data-position="fixed" style="text-align: center;">
+                   <a href="https://www.facebook.com/Comune-di-Pescara-803719146335447/" class="fa fa-facebook fa-2x ui-link ui-btn ui-corner-all" data-role="button" role="button"></a>
+                <a href="https://www.instagram.com/explore/locations/237210044/comune-di-pescara/"  class="fa fa-instagram fa-2x ui-link ui-btn ui-corner-all" data-role="button" role="button"></a>
+                <a href="https://twitter.com/pescaranews?lang=it" class="fa fa-twitter fa-2x ui-link ui-btn ui-corner-all" data-role="button" role="button"></a>
+            
+                </div>
+            </div>
+        </div>
+        <!-- Pagina Fine Farmacie da visitare -->
+
+
+
+        <!--  Pagina Ristoranti da visitare -->
+
+        <div data-role="page"  id="ristoranti">
+            <div data-role="panel"  style="text-align: center;" id="pannelloRistoranti">
+                <img src="img/Ponte_delmare.png" alt=""/>
+                <h3>Enogastronomia</h3>
+                <ul data-role="listview">
+
+                    <li><a href="#home">Home</a></li>
+                    <li><a href="#visitare">Visitare</a></li>
+                    <li><a href="#percorsi">Itinerari</a></li>
+                    <li><a href="#galleria">Galleria</a></li>
+                    <li><a href="#preferiti">Preferiti</a></li>
+                    <li><a href="#contatti">Contatti</a></li>
+                    <li><a href="#trasporti">Trasporti</a></li>
+                    <li><a href="#mappa">Mappa</a></li>
+
+                </ul>
+            </div>
+            <div data-role="header"  id="head" data-position="fixed">
+                <a href="#pannelloRistoranti" id="head" class="ui-btn ui-btn-left ui-icon-bars ui-btn-icon-left ui-btn-icon-notext">Menù</a>
+                <h1>Enogastronomia</h1>
+
+
+
+                <div data-role="main" class="ui-content">
+
+
+
+
+                    <div>
+                        <ul id="listaRistoranti" data-role='listview'></ul>
+
+                    </div>
+
+                    <ol data-role="listview">
+
+
+                    </ol>
+
+
+                </div>
+                <div data-role="footer" data-theme="b" data-position="fixed" style="text-align: center;">
+                 <a href="https://www.facebook.com/Comune-di-Pescara-803719146335447/" class="fa fa-facebook fa-2x ui-link ui-btn ui-corner-all" data-role="button" role="button"></a>
+                <a href="https://www.instagram.com/explore/locations/237210044/comune-di-pescara/"  class="fa fa-instagram fa-2x ui-link ui-btn ui-corner-all" data-role="button" role="button"></a>
+                <a href="https://twitter.com/pescaranews?lang=it" class="fa fa-twitter fa-2x ui-link ui-btn ui-corner-all" data-role="button" role="button"></a>
+            
+                </div>
+            </div>
+        </div>
+        <!-- Pagina Fine Farmacie da visitare -->
+
+
+
+
+
+
+
+
+
+
+
+
+
+        <script type="text/javascript" src="cordova.js"></script>
+        <script type="text/javascript" src="js/index.js"></script>
+    </body>
+</html>
